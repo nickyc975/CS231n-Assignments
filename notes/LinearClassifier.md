@@ -32,6 +32,16 @@ $$
 
   $$
 
+* 损失函数梯度
+  
+  $$
+
+  \frac{\partial L(W, b)}{\partial W} = \frac{1}{N}\sum_{1 \le i \le N 且 L_i \neq 0}\sum_{j \neq y_i}(M_j^i - M_{y_i}^i)
+
+  $$
+
+  其中$M_k^i$表示第$k$列为$x_i^T$，其余列均为$\boldsymbol{} 0$的与$W$同形的矩阵。
+
 * 损失函数解释
 
   $s_j$表示将第$i$的样本判定为第$j$类的评分，$s_{y_i}$表示将第$i$个样本判定为正确分类的评分，其中$j \neq y_i$。
